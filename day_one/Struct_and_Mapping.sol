@@ -37,7 +37,7 @@ contract StructAndMappings {
         mapping (uint => Animal) public animals;
         uint public counter;
 
-        function newAnimal(string memory specie, uint age, Animal memory  ) public returns (uint) {
+        function newAnimal(string memory specie, uint age) public returns (uint) {
            animals[counter] = Animal ({
             species: specie,
             age: age
@@ -50,8 +50,6 @@ contract StructAndMappings {
         {
             return animals[key];
         }
-
-        //NOOO: newAnimal("cane", 2); // chiamare dentro un ' altra func
 }
 
 
